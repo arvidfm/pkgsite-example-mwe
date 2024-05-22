@@ -3,6 +3,7 @@
 package without_js_test
 
 import (
+	"database/sql/driver"
 	"fmt"
 )
 
@@ -11,6 +12,7 @@ type A struct {
 }
 
 func ExampleTest_one() {
+	driver.IsValue(nil)
 	fmt.Println(A{Field: "test1"})
 	// Output:
 	// {test1}
